@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.nju.edu.cn/'>Nanjing University</a>. 522024110074@smail.nju.edu.cn
+subtitle: <a href='https://www.nju.edu.cn/'> Nanjing University</a>. 522024110074@smail.nju.edu.cn
 
 profile:
   align: right
