@@ -1,0 +1,252 @@
+/* 全局基础 */
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa; /* 柔和灰白 */
+    color: #333;
+}
+
+/* 头部与导航 */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    color: #333;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #2563eb; /* 学术蓝 */
+}
+
+/* 内容区容器 */
+main {
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+}
+
+/* 卡片样式 */
+section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+}
+
+/* 标题 */
+h1, h2 {
+    font-family: 'Georgia', 'Lora', serif;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd; /* 细腻淡灰 */
+    padding-bottom: 8px;
+    color: #222;
+}
+
+/* 配置链接颜色 */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.photo-placeholder img {
+    width: 150px;
+    height: auto;
+    max-height: 150px;
+    border-radius: 12px; /* 现代圆角矩形 */
+    object-fit: contain;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.profile-text {
+    flex: 1;
+}
+
+/* Minesweeper styles */
+#minesweeper-section {
+    margin-top: 40px;
+}
+
+#minesweeper {
+    display: grid;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.ms-controls{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:10px;
+}
+.ms-counter, .ms-timer{
+    background: #f3f4f6;
+    padding:6px 10px;
+    border-radius:8px;
+    font-weight:600;
+    color:#222;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.ms-timer{ min-width:60px; text-align:center }
+
+.cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden {
+    background: #e0e0e0;
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+}
+
+.hidden:hover {
+    background: #d3d3d3;
+}
+
+.revealed {
+    background: #fafafa;
+    box-shadow: none;
+}
+
+.flagged {
+    background: #e0e0e0;
+    color: #e00;
+}
+
+.num1 { color: #2563eb; }
+.num2 { color: #228b22; }
+.num3 { color: #b22222; }
+.num4 { color: #4b0082; }
+.num5 { color: #a52a2a; }
+.num6 { color: #008b8b; }
+.num7 { color: #000; }
+.num8 { color: #555; }
+
+/* 页脚 */
+footer {
+    background: rgba(255,255,255,0.9);
+    color: #555;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 4px rgba(0,0,0,0.05);
+}
+
+/* Snow effect canvas background */
+#snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;          /* 确保它在所有内容后面 */
+    pointer-events: none; /* 确保鼠标点击能穿透它，点击到下面的按钮 */
+    background-color: #ffffff; /* 你的页面背景色 */
+}
+
+/* Content container stays relative but no special z-index now */
+.container { position: relative; }
+
+/* Button style with frosted glass effect */
+#toggle-snow-btn{
+    padding:6px 10px;
+    border-radius:6px;
+    border:none;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+    color:#111;
+    cursor:pointer;
+    transition: background 0.2s;
+}
+#toggle-snow-btn:hover{
+    background: rgba(255,255,255,0.4);
+}
+
+@keyframes fall{
+    0% { transform: translateY(-10vh); }
+    100% { transform: translateY(110vh); }
+}
+
+@keyframes sway{
+    0% { transform: translateX(0); }
+    50% { transform: translateX(12px); }
+    100% { transform: translateX(0); }
+}
+
+.footer-controls{ position: absolute; left: 12px; top: 8px; }
+#toggle-snow-btn{ padding:6px 10px; border-radius:6px; border:none; background:#2563eb; color:#fff; cursor:pointer }
+
+
