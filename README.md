@@ -24,5 +24,3 @@ git push -u origin main
 - 网站主页面：[index.html](index.html)
 - 中文页面：[zh.html](zh.html)
 - 资源目录：[assets/](assets/)
-
-如需我代替你执行 `gh repo create` 并推送（需要你在本机已登录 `gh`），我可以继续执行。
